@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Plumbing Houston | 24/7 Emergency Plumbing Services</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0F4C81',
+                            darkblue: '#0A3357',
+                            lightblue: '#1E73BE',
+                            orange: '#FF6B00',
+                            accent: '#E65100',
+                            bglight: '#F4F7FA'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(10, 51, 87, 0.95) 0%, rgba(15, 76, 129, 0.85) 100%);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-brand-bglight antialiased selection:bg-brand-orange selection:text-white">
+
+    <!-- 1. Top Announcement / Emergency Bar -->
+    <div class="bg-brand-orange text-white py-2 px-4 text-xs sm:text-sm font-semibold tracking-wide">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-center gap-2">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2.5 h-2.5 rounded-full bg-white animate-pulse"></span>
+                <i class="fa-solid fa-clock"></i>
+                <span>24/7 Emergency Plumbing Available in Houston & Surrounding Areas</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:7135550199" class="hover:underline flex items-center gap-1">
+                    <i class="fa-solid fa-phone-volume"></i> Call Now: (713) 555-0199
+                </a>
+                <span class="hidden md:inline">|</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-shield-halved"></i> Licensed & Insured #MPL-40912</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Navigation Bar -->
+    <nav class="sticky top-0 z-40 bg-white shadow-md border-b border-gray-100 transition-all duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center text-white shadow-md group-hover:bg-brand-orange transition-colors">
+                        <i class="fa-solid fa-faucet-drip text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-extrabold text-brand-darkblue leading-none block">EXPERT<span class="text-brand-orange">PLUMBING</span></span>
+                        <span class="text-xs text-gray-500 font-medium tracking-wider uppercase">Houston Metro Region</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
+                    <a href="#services" class="hover:text-brand-orange transition-colors">Services</a>
+                    <a href="#why-us" class="hover:text-brand-orange transition-colors">Why Choose Us</a>
+                    <a href="#reviews" class="hover:text-brand-orange transition-colors">Reviews</a>
+                    <a href="#faq" class="hover:text-brand-orange transition-colors">FAQ</a>
+                    <a href="#quote" class="hover:text-brand-orange transition-colors">Book Online</a>
+                </div>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="tel:7135550199" class="bg-brand-orange hover:bg-brand-accent text-white px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i> (713) 555-0199
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-gray-700 hover:text-brand-orange focus:outline-none p-2" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-3 pb-6 space-y-3 shadow-xl">
+            <a href="#services" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="#why-us" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-gray-100">Why Choose Us</a>
+            <a href="#reviews" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-gray-100">Reviews</a>
+            <a href="#faq" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-gray-100">FAQ</a>
+            <a href="#quote" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-gray-100">Book Online</a>
+            <div class="pt-2">
+                <a href="tel:7135550199" class="w-full bg-brand-orange text-white text-center py-3 rounded-lg font-bold flex items-center justify-center gap-2 shadow-md">
+                    <i class="fa-solid fa-phone"></i> Emergency Call: (713) 555-0199
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. Hero Section -->
+    <section class="relative bg-brand-darkblue text-white overflow-hidden py-16 lg:py-24">
+        <!-- Background Pattern / Image Overlay -->
+        <div class="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-blue/60 border border-brand-lightblue/30 text-brand-orange text-sm font-semibold">
+                        <i class="fa-solid fa-circle-check"></i> Houston's Premier Plumbing Specialists
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Fast, Reliable & <br class="hidden sm:inline"><span class="text-brand-orange">24/7 Emergency</span> Plumbing
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        From urgent leak repairs to tankless water heater installations, our licensed Houston plumbers arrive fast with upfront pricing and 100% guaranteed work.
+                    </p>
+
+                    <!-- Trust Badges Bar -->
+                    <div class="pt-4 grid grid-cols-3 gap-4 border-t border-gray-700/60 max-w-lg mx-auto lg:mx-0 text-center sm:text-left">
+                        <div class="flex flex-col sm:flex-row items-center gap-2">
+                            <i class="fa-solid fa-award text-brand-orange text-2xl"></i>
+                            <div>
+                                <h4 class="font-bold text-sm">Licensed & Insured</h4>
+                                <p class="text-xs text-gray-400">Master Plumbers</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-center gap-2">
+                            <i class="fa-solid fa-star text-yellow-400 text-2xl"></i>
+                            <div>
+                                <h4 class="font-bold text-sm">5-Star Rated</h4>
+                                <p class="text-xs text-gray-400">500+ Reviews</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-center gap-2">
+                            <i class="fa-solid fa-bolt text-brand-orange text-2xl"></i>
+                            <div>
+                                <h4 class="font-bold text-sm">Same-Day Service</h4>
+                                <p class="text-xs text-gray-400">Fast Dispatch</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Quick Quote Form -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white text-gray-800 rounded-2xl p-6 sm:p-8 shadow-2xl border border-gray-100">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold text-brand-darkblue">Get a Free Quick Quote</h3>
+                            <p class="text-sm text-gray-500">Fill out this quick form for instant priority dispatch.</p>
+                        </div>
+                        
+                        <form id="hero-quote-form" onsubmit="handleHeroSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 uppercase mb-1">Your Full Name *</label>
+                                <input type="text" id="hero-name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-700 uppercase mb-1">Phone Number *</label>
+                                    <input type="tel" id="hero-phone" required placeholder="(713) 000-0000" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-700 uppercase mb-1">ZIP Code *</label>
+                                    <input type="text" id="hero-zip" required placeholder="77002" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 uppercase mb-1">Service Needed *</label>
+                                <select id="hero-service" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all bg-white">
+                                    <option value="">Select Plumbing Issue...</option>
+                                    <option value="emergency">Emergency Plumbing Leak</option>
+                                    <option value="drain">Drain Cleaning & Clogs</option>
+                                    <option value="water-heater">Water Heater Repair / Replace</option>
+                                    <option value="leak-detection">Slab Leak Detection</option>
+                                    <option value="sewer">Sewer Line Service</option>
+                                    <option value="other">Other Commercial/Residential Service</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-orange hover:bg-brand-accent text-white font-bold py-4 rounded-lg shadow-lg hover:shadow-xl transition-all text-lg flex items-center justify-center gap-2">
+                                <span>Request Immediate Callback</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            <p class="text-xs text-center text-gray-400">🔒 We respect your privacy. No spam guaranteed.</p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Core Services Grid -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-extrabold text-brand-orange uppercase tracking-wider mb-2">Our Expertise</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-brand-darkblue">Complete Plumbing Solutions for Houston Homes & Businesses</p>
+                <div class="w-20 h-1 bg-brand-orange mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-brand-bglight rounded-2xl p-8 border border-gray-100 hover:border-brand-blue/30 shadow-sm hover:shadow-xl transition-all group duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-brand-blue/10 text-brand-blue rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-blue group-hover:text-white transition-all">
+                            <i class="fa-solid fa-kit-medical"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-darkblue mb-3">Emergency Plumbing Repair</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6 text-sm">
+                            Burst pipes, overflowing toilets, or severe water main leaks? Our 24/7 team responds rapidly anywhere in the Houston metro area.
+                        </p>
+                    </div>
+                    <a href="#quote" onclick="preselectService('emergency')" class="inline-flex items-center text-brand-blue font-bold hover:text-brand-orange text-sm group-hover:translate-x-1 transition-all">
+                        Book Emergency Repair <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-brand-bglight rounded-2xl p-8 border border-gray-100 hover:border-brand-blue/30 shadow-sm hover:shadow-xl transition-all group duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-brand-blue/10 text-brand-blue rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-blue group-hover:text-white transition-all">
+                            <i class="fa-solid fa-shower"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-darkblue mb-3">Drain Cleaning & Hydro Jetting</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6 text-sm">
+                            Remove stubborn grease, root intrusions, and buildup with state-of-the-art video camera inspections and high-pressure hydro jetting.
+                        </p>
+                    </div>
+                    <a href="#quote" onclick="preselectService('drain')" class="inline-flex items-center text-brand-blue font-bold hover:text-brand-orange text-sm group-hover:translate-x-1 transition-all">
+                        Clear Your Drains <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-brand-bglight rounded-2xl p-8 border border-gray-100 hover:border-brand-blue/30 shadow-sm hover:shadow-xl transition-all group duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-brand-blue/10 text-brand-blue rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-blue group-hover:text-white transition-all">
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-darkblue mb-3">Water Heater Service</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6 text-sm">
+                            Expert installation, repair, and maintenance for energy-efficient tankless water heaters and traditional tank units.
+                        </p>
+                    </div>
+                    <a href="#quote" onclick="preselectService('water-heater')" class="inline-flex items-center text-brand-blue font-bold hover:text-brand-orange text-sm group-hover:translate-x-1 transition-all">
+                        Fix Water Heater <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-brand-bglight rounded-2xl p-8 border border-gray-100 hover:border-brand-blue/30 shadow-sm hover:shadow-xl transition-all group duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-brand-blue/10 text-brand-blue rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-blue group-hover:text-white transition-all">
+                            <i class="fa-solid fa-magnifying-glass-location"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-darkblue mb-3">Leak Detection & Repair</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6 text-sm">
+                            Non-invasive acoustic leak detection to pinpoint hidden slab leaks, wall leaks, and underground pipe fractures quickly.
+                        </p>
+                    </div>
+                    <a href="#quote" onclick="preselectService('leak-detection')" class="inline-flex items-center text-brand-blue font-bold hover:text-brand-orange text-sm group-hover:translate-x-1 transition-all">
+                        Schedule Leak Test <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-brand-bglight rounded-2xl p-8 border border-gray-100 hover:border-brand-blue/30 shadow-sm hover:shadow-xl transition-all group duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-brand-blue/10 text-brand-blue rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-blue group-hover:text-white transition-all">
+                            <i class="fa-solid fa-dharmachakra"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-darkblue mb-3">Sewer Line Repair</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6 text-sm">
+                            Trenchless sewer replacement and pipe lining options to restore proper drainage without destroying your yard.
+                        </p>
+                    </div>
+                    <a href="#quote" onclick="preselectService('sewer')" class="inline-flex items-center text-brand-blue font-bold hover:text-brand-orange text-sm group-hover:translate-x-1 transition-all">
+                        Inspect Sewer Line <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-brand-bglight rounded-2xl p-8 border border-gray-100 hover:border-brand-blue/30 shadow-sm hover:shadow-xl transition-all group duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-brand-blue/10 text-brand-blue rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-blue group-hover:text-white transition-all">
+                            <i class="fa-solid fa-city"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-darkblue mb-3">Commercial Plumbing</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6 text-sm">
+                            Tailored plumbing solutions for restaurants, office buildings, retail centers, and industrial facilities in Houston.
+                        </p>
+                    </div>
+                    <a href="#quote" onclick="preselectService('other')" class="inline-flex items-center text-brand-blue font-bold hover:text-brand-orange text-sm group-hover:translate-x-1 transition-all">
+                        Commercial Inquiry <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why Choose Us / Value Proposition -->
+    <section id="why-us" class="py-20 bg-brand-darkblue text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <h2 class="text-xs font-extrabold text-brand-orange uppercase tracking-wider mb-2">The Expert Advantage</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold mb-6">Why Houston Homeowners Choose Us First</h3>
+                    <p class="text-gray-300 leading-relaxed mb-8">
+                        We know how stressful plumbing problems can be. That’s why we’re dedicated to delivering honest quotes, master craftmanship, and respectful technicians who leave your home spotless.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-file-invoice-dollar text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold">Upfront Pricing - No Hidden Fees</h4>
+                                <p class="text-gray-400 text-sm">You approve the exact price before any work begins. No surprises on your final invoice.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-user-shield text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold">Background Checked & Licensed</h4>
+                                <p class="text-gray-400 text-sm">Every plumber is drug-tested, background-checked, and highly certified for your peace of mind.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-handshake text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold">100% Satisfaction Guarantee</h4>
+                                <p class="text-gray-400 text-sm">If you aren't completely satisfied with our work, we will make it right—guaranteed.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-truck-fast text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold">Fast On-Time Arrival</h4>
+                                <p class="text-gray-400 text-sm">We value your time. Our trucks are fully stocked to finish most jobs in a single trip.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Feature Card / Stats -->
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-brand-blue to-brand-darkblue border border-brand-lightblue/20 rounded-3xl p-8 sm:p-10 shadow-2xl">
+                        <div class="text-center pb-8 border-b border-gray-700">
+                            <span class="text-5xl sm:text-6xl font-black text-brand-orange">15+</span>
+                            <p class="text-lg font-medium text-gray-200 mt-2">Years Serving Greater Houston</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-6 pt-8 text-center">
+                            <div>
+                                <span class="text-3xl font-extrabold text-white">12,500+</span>
+                                <p class="text-xs text-gray-300 mt-1">Jobs Completed</p>
+                            </div>
+                            <div>
+                                <span class="text-3xl font-extrabold text-white">45 Mins</span>
+                                <p class="text-xs text-gray-300 mt-1">Avg Response Time</p>
+                            </div>
+                            <div>
+                                <span class="text-3xl font-extrabold text-white">24/7</span>
+                                <p class="text-xs text-gray-300 mt-1">Emergency Service</p>
+                            </div>
+                            <div>
+                                <span class="text-3xl font-extrabold text-white">4.9 ★</span>
+                                <p class="text-xs text-gray-300 mt-1">Google Rating</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Customer Reviews / Testimonials -->
+    <section id="reviews" class="py-20 bg-brand-bglight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-extrabold text-brand-orange uppercase tracking-wider mb-2">Real Reviews</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-brand-darkblue">What Your Houston Neighbors Say</p>
+                <div class="w-20 h-1 bg-brand-orange mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellow-400 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic text-sm mb-6">
+                            "Had a major pipe burst under the sink at 2 AM on a Sunday. Expert Plumbing arrived in less than 40 minutes and had everything fixed cleanly before breakfast. Life savers!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-brand-blue text-white font-bold flex items-center justify-center text-sm">
+                            RM
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Robert M.</h4>
+                            <p class="text-xs text-gray-500">The Heights, Houston</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellow-400 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic text-sm mb-6">
+                            "Upgraded our old water heater to a new tankless model. They gave us an exact quote up front, completed the work in 4 hours, and cleaned up perfectly. Super professional."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-brand-orange text-white font-bold flex items-center justify-center text-sm">
+                            SL
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Sarah L.</h4>
+                            <p class="text-xs text-gray-500">Katy, TX</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellow-400 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic text-sm mb-6">
+                            "We had a stubborn main drain line clog that two other plumbers couldn't resolve. Their hydro jetting team cleared it right out. Honest and reliable service!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                        <div class="w-10 h-10 rounded-full bg-brand-blue text-white font-bold flex items-center justify-center text-sm">
+                            DC
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">David C.</h4>
+                            <p class="text-xs text-gray-500">Sugar Land, TX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Interactive Quote / Booking Section -->
+    <section id="quote" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-bglight border border-gray-200 rounded-3xl p-8 sm:p-12 shadow-xl">
+                <div class="text-center mb-10">
+                    <span class="bg-brand-orange/10 text-brand-orange px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">Fast Online Booking</span>
+                    <h2 class="text-3xl font-extrabold text-brand-darkblue mt-3">Schedule Plumbing Service</h2>
+                    <p class="text-gray-600 text-sm mt-2">Select your preferred date & time. We will call you immediately to confirm!</p>
+                </div>
+
+                <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Full Name *</label>
+                            <input type="text" id="book-name" required placeholder="Jane Smith" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Phone Number *</label>
+                            <input type="tel" id="book-phone" required placeholder="(713) 555-0199" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Service Required *</label>
+                            <select id="book-service" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue outline-none transition-all bg-white">
+                                <option value="">Select Service...</option>
+                                <option value="emergency">Emergency Repair</option>
+                                <option value="drain">Drain Cleaning</option>
+                                <option value="water-heater">Water Heater Repair/Install</option>
+                                <option value="leak-detection">Leak Detection</option>
+                                <option value="sewer">Sewer Line Service</option>
+                                <option value="other">General Maintenance / Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Property Address / ZIP *</label>
+                            <input type="text" id="book-address" required placeholder="1234 Main St, Houston, TX 77002" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Preferred Date *</label>
+                            <input type="date" id="book-date" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue outline-none transition-all bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Preferred Time Window *</label>
+                            <select id="book-time" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue outline-none transition-all bg-white">
+                                <option value="">Select Time Window...</option>
+                                <option value="asap">ASAP (Emergency Dispatch)</option>
+                                <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
+                                <option value="afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
+                                <option value="evening">Evening (4:00 PM - 7:00 PM)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Describe Your Plumbing Issue (Optional)</label>
+                        <textarea id="book-notes" rows="3" placeholder="Tell us more about what's going on..." class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue outline-none transition-all"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-brand-orange hover:bg-brand-accent text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all text-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>Confirm Appointment Request</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Frequently Asked Questions (FAQ) Accordion -->
+    <section id="faq" class="py-20 bg-brand-bglight">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-extrabold text-brand-orange uppercase tracking-wider mb-2">Got Questions?</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-brand-darkblue">Frequently Asked Questions</p>
+                <div class="w-20 h-1 bg-brand-orange mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleAccordion(1)" class="w-full text-left px-6 py-4 font-bold text-brand-darkblue flex justify-between items-center focus:outline-none">
+                        <span>How fast can a plumber arrive at my house for an emergency?</span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-brand-orange transition-transform"></i>
+                    </button>
+                    <div id="faq-content-1" class="accordion-content px-6 bg-gray-50 text-gray-600 text-sm leading-relaxed">
+                        <div class="py-4">
+                            Our emergency plumbers are dispatched throughout the Houston metro area 24 hours a day. Average dispatch arrival times range from 30 to 60 minutes depending on your specific location and traffic conditions.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleAccordion(2)" class="w-full text-left px-6 py-4 font-bold text-brand-darkblue flex justify-between items-center focus:outline-none">
+                        <span>Do you charge extra for emergency services after hours or on weekends?</span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-brand-orange transition-transform"></i>
+                    </button>
+                    <div id="faq-content-2" class="accordion-content px-6 bg-gray-50 text-gray-600 text-sm leading-relaxed">
+                        <div class="py-4">
+                            We offer transparent, upfront pricing. You will always know the exact cost before work begins. We do not charge surprise hidden fees, and we provide clear estimates upfront even for late-night emergency calls.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleAccordion(3)" class="w-full text-left px-6 py-4 font-bold text-brand-darkblue flex justify-between items-center focus:outline-none">
+                        <span>Are your plumbers licensed and insured in Texas?</span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down text-brand-orange transition-transform"></i>
+                    </button>
+                    <div id="faq-content-3" class="accordion-content px-6 bg-gray-50 text-gray-600 text-sm leading-relaxed">
+                        <div class="py-4">
+                            Yes! Every member of our team is fully licensed by the Texas State Board of Plumbing Examiners (TSBPE) and backed by full commercial liability insurance and workers' compensation coverage.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleAccordion(4)" class="w-full text-left px-6 py-4 font-bold text-brand-darkblue flex justify-between items-center focus:outline-none">
+                        <span>Should I repair or replace my water heater?</span>
+                        <i id="faq-icon-4" class="fa-solid fa-chevron-down text-brand-orange transition-transform"></i>
+                    </button>
+                    <div id="faq-content-4" class="accordion-content px-6 bg-gray-50 text-gray-600 text-sm leading-relaxed">
+                        <div class="py-4">
+                            If your traditional water heater is over 8-12 years old, rusting, or leaking from the tank, replacement is usually the safest and most cost-effective option. For minor heating element or thermostat failures, a quick repair is often sufficient. We will evaluate and give you honest options!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Footer -->
+    <footer class="bg-brand-darkblue text-white pt-16 pb-8 border-t border-brand-lightblue/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-700/60">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-orange rounded-lg flex items-center justify-center text-white">
+                            <i class="fa-solid fa-faucet-drip text-xl"></i>
+                        </div>
+                        <span class="text-xl font-extrabold tracking-wide">EXPERT<span class="text-brand-orange">PLUMBING</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Houston's top-rated 24/7 emergency plumbing service provider. Fast dispatch, honest pricing, and master-level workmanship.
+                    </p>
+                    <div class="flex space-x-3 text-gray-400">
+                        <a href="#" class="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-orange hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-orange hover:text-white transition-all"><i class="fa-brands fa-google"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-orange hover:text-white transition-all"><i class="fa-brands fa-yelp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Service Areas -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 border-b border-gray-700 pb-2 inline-block">Service Areas</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><i class="fa-solid fa-location-dot text-brand-orange mr-2"></i> Downtown Houston</li>
+                        <li><i class="fa-solid fa-location-dot text-brand-orange mr-2"></i> The Heights & Montrose</li>
+                        <li><i class="fa-solid fa-location-dot text-brand-orange mr-2"></i> Katy & Sugar Land</li>
+                        <li><i class="fa-solid fa-location-dot text-brand-orange mr-2"></i> The Woodlands & Spring</li>
+                        <li><i class="fa-solid fa-location-dot text-brand-orange mr-2"></i> Pearland & Pasadena</li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 border-b border-gray-700 pb-2 inline-block">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#services" class="hover:text-brand-orange transition-colors">Emergency Plumbing</a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition-colors">Drain Jetting</a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition-colors">Tankless Water Heaters</a></li>
+                        <li><a href="#why-us" class="hover:text-brand-orange transition-colors">Why Choose Us</a></li>
+                        <li><a href="#quote" class="hover:text-brand-orange transition-colors">Schedule Appointment</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Direct Contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 border-b border-gray-700 pb-2 inline-block">24/7 Contact Info</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone text-brand-orange mt-1"></i>
+                            <div>
+                                <span class="block text-white font-bold">(713) 555-0199</span>
+                                <span class="text-xs">24/7 Dispatch Hotline</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope text-brand-orange mt-1"></i>
+                            <span>service@expertplumbhouston.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-clock text-brand-orange mt-1"></i>
+                            <span>Open 24 Hours / 7 Days a Week</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+                <p>&copy; 2026 Expert Plumbing Houston. All Rights Reserved. Master Plumbing License #MPL-40912.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                    <a href="#" class="hover:underline">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Confirmation Modal -->
+    <div id="confirmation-modal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 text-center shadow-2xl transform transition-all scale-100">
+            <div class="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Request Received!</h3>
+            <p class="text-gray-600 text-sm mb-6" id="modal-message">
+                Thank you! Our Houston dispatch team has received your request and will call your phone number back in 5-10 minutes.
+            </p>
+            <button onclick="closeModal()" class="w-full bg-brand-orange hover:bg-brand-accent text-white font-bold py-3 rounded-lg shadow-md transition-all">
+                Got It
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Set minimum date for booking input to today
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateInput = document.getElementById('book-date');
+            if (dateInput) {
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.setAttribute('min', today);
+                dateInput.value = today;
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu when clicking nav links
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // FAQ Accordion Toggle
+        function toggleAccordion(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                // Close all other accordions
+                document.querySelectorAll('.accordion-content').forEach(el => el.style.maxHeight = '0px');
+                document.querySelectorAll('[id^="faq-icon-"]').forEach(el => el.style.transform = 'rotate(0deg)');
+
+                // Open current
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Pre-select service in booking form when clicking card links
+        function preselectService(val) {
+            const select = document.getElementById('book-service');
+            if (select) {
+                select.value = val;
+            }
+        }
+
+        // Modal Display logic
+        const modal = document.getElementById('confirmation-modal');
+        const modalMessage = document.getElementById('modal-message');
+
+        function openModal(msg) {
+            if (msg) modalMessage.textContent = msg;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Handle Hero Quick Form Submit
+        function handleHeroSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('hero-name').value;
+            const phone = document.getElementById('hero-phone').value;
+            
+            openModal(`Thank you ${name}! We have prioritized your emergency request. Our team will call ${phone} immediately.`);
+            document.getElementById('hero-quote-form').reset();
+        }
+
+        // Handle Booking Form Submit
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('book-name').value;
+            const phone = document.getElementById('book-phone').value;
+            const date = document.getElementById('book-date').value;
+
+            openModal(`Appointment requested for ${name} on ${date}! Our dispatch manager will contact ${phone} shortly to finalize details.`);
+            document.getElementById('booking-form').reset();
+        }
+    </script>
+</body>
+</html>
